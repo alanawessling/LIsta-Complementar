@@ -15,7 +15,19 @@ const salario = Number(prompt(`Informe o salário do comprador:`));
 
     //PROCESSAMENTO
 
-    
+let porcentagem = salario * 0.3;
+let meses = ano * 12;
+let parcela = valor / meses;
+
+    if (parcela < porcentagem){
+        alert(`Financiamento foi concedido, o valor da parcela é de R$ ${parcela}`)
+    }
+    else if (parcela > porcentagem){
+        alert(`Financiamento negado!`)
+    }
+    else{
+        alert(`Dados Inválidos!`)
+    }
     
     //SAÍDA
 
