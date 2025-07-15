@@ -12,9 +12,28 @@
 
     //ENTRADA
   
+    const distancia = Number(prompt(`Informe a distância da viagem, em quilômetros:`));
+    const porDia = Number(prompt(`Informe quantos quilômetros pretende viajar por dia:`));
 
     //PROCESSAMENTO
 
+    const dias = distancia / porDia;
+
+    if (dias <= 3){
+        alert(`Qualquer Período`)
+    }
+    else if (dias <= 10){
+        alert(`Férias de Julho`)
+    }
+    else if (dias <= 20){
+        alert(`Férias de Verão`)
+    }
+    else if (dias > 20){
+        alert(`Deverá Trabalhar Remoto`)
+    }
+    else {
+        alert(`Dados Inválidos`)
+    }
     
     //SAÍDA
 
