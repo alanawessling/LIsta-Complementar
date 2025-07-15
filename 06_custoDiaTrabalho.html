@@ -17,20 +17,20 @@
     //ENTRADA
 
     const dias = Number(prompt(`Informe a quantidade de viagens que foram realizadas por dia:`));
-    const cargo = prompt(`Informe o cargo que você ocupa:`);
+    const cargo = prompt(`Informe o cargo que você ocupa: (M-motorista ou C-cobrador)`).toUpperCase();
 
     //PROCESSAMENTO
 
-    if (cargo === `Motorista` && <= 10) {
+    if (cargo == `M` && dias <= 10) {
         alert(`O valor final sendo um ${cargo} foi de R$ ${(100 * 0.2) + 100}`)
     }
-    else if (cargo === `Motorista` && > 10) {
+    else if (cargo == `M` && dias > 10) {
         alert(`O valor final sendo um ${cargo} foi de R$ ${(100 * 0.35) + 100}`)
     }
-    else if (cargo === `Cobrador` && <= 10) {
+    else if (cargo == `C` && dias <= 10) {
         alert(`O valor final sendo um ${cargo} foi de R$ ${100}`)
     }
-    else if (cargo === `Cobrador` && > 10) {
+    else if (cargo == `C` && dias > 10) {
         alert(`O valor final sendo um ${cargo} foi de R$ ${(100 * 0.1) + 100}`)
     }
     else {

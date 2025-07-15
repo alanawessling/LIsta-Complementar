@@ -15,20 +15,20 @@
 
     const salario = Number(prompt(`Informe o seu salário:`));
     const auxilio = prompt(`Você deseja receber auxílio transporte: (S-sim ou N-não)`).toUpperCase();
-    const veiculo = prompt(`Você utiliza veículo próprio para se locomover ao trabalho: (S-sim ou N-não)`).toLowerCase();
+    const veiculo = prompt(`Você utiliza veículo próprio ou publico? (PU - Publico PR - Privado`).toUpperCase();
 
     //PROCESSAMENTO
 
-    if (auxilio === `S` || veiculo === `S`) {
+if (auxilio == `S`) {
 
-        if (veiculo === `S`) {
-            alert(`Com o desconto de 6% e com o adicional de 200 reais o salário final é R$ ${((salario / 0.6) + salario) + 200}`)
+        if (veiculo == `PR`) {
+            alert(`Com o desconto de 6% e com o adicional de 200 reais o salário final é R$ ${((salario - (salario * 0.06)) + 200).toFixed(2)}`)
         }
-        else if (auxilio === `S`) {
-            alert(`Com o desconto de 6% e com o adicional de 200 reais o salário final é R$ ${((salario / 0.6) + salario) + 150}`)
+        else if (veiculo == `PU`) {
+            alert(`Com o desconto de 6% e com o adicional de 150 reais o salário final é R$ ${((salario - (salario * 0.06)) + 150).toFixed(2)}`)
         }
     }
-    else if (auxilio === `N` && veiculo === `N`) {
+    else if (auxilio == `N`) {
         alert(`Seu salário final é R$ ${salario}`)
     }
     else {

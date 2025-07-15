@@ -14,18 +14,18 @@
     //ENTRADA
 
 const valor = Number(prompt(`Informe o valor do computador que está vendendo:`));
-const pagamento = prompt(`Informe a forma de pagamento que o Cliente procederá para a comopra do equipamento: (B-boleto, D-dinheiro ou P-pix)`).toUpperCase();
+const pagamento = prompt(`Informe a forma de pagamento que o Cliente procederá para a compra do equipamento: (B-boleto, D-dinheiro ou P-pix)`).toUpperCase();
 
     //PROCESSAMENTO
 
-if (pagamento === `B`){
-    alert(`O valor a pagar no computador é de R$ ${(valor / 0.03)- valor}`)
+if (pagamento == `B`){
+    alert(`O valor a pagar no computador é de R$ ${valor - (valor * 0.03)}`)
 }
-else if (pagamento === `D`){
-    alert(`O valor a pagar no computador é de R$ ${(valor / 0.05)- valor}`)
+else if (pagamento == `D`){
+    alert(`O valor a pagar no computador é de R$ ${valor - (valor * 0.05)}`)
 }
-else if (pagamento === `P`){
-    alert(`O valor a pagar no computador é de R$ ${(valor / 0.1)- valor}`)
+else if (pagamento == `P`){
+    alert(`O valor a pagar no computador é de R$ ${valor - (valor * 0.1)}`)
 }
 else {
     alert(`Dados Inválidos`)
